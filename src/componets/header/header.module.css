@@ -1,0 +1,159 @@
+.container {
+  width: 100%;
+  display: sticky;
+  overflow: auto;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  width: 1905px;
+  height: 50px;
+  display:  flex;
+  position: relative;
+  align-items: flex-start;
+  flex-shrink: 1;
+  top: 0;
+  z-index: 1000;
+}
+.searhbar {
+  gap: 344px;
+  top: 31px;
+  left: 737px;
+  width: 460px;
+  height: 62px;
+  display: flex;
+  padding: 3px 11px;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background-color: rgba(251, 240, 240, 1);
+}
+.logo {
+  top: 0px;
+  left: 0px;
+  width: 255px;
+  height: 123px;
+  position: absolute;
+}
+.text {
+  top: 33px;
+  left: 255px;
+  color: rgba(253, 118, 60, 1);
+  width: 111px;
+  height: auto;
+  position: absolute;
+  font-size: 32px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.text02 {
+  top: 43px;
+  left: 382px;
+  color: rgba(253, 118, 60, 1);
+  width: 175px;
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.text04 {
+  top: 47px;
+  left: 603px;
+  color: rgba(253, 118, 60, 1);
+  height: auto;
+  position: absolute;
+  font-size: 20px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.text06 {
+  top: 41px;
+  left: 756px;
+  color: rgba(241, 9, 9, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: Regular;
+  text-align: left;
+  font-family: Pristina;
+  font-weight: 400;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.text07 {
+  font-weight: 400;
+}
+.searchlogo {
+  top: 43px;
+  left: 1140px;
+  width: 50px;
+  height: 34px;
+  position: absolute;
+}
+.text08 {
+  top: 45px;
+  left: 1270px;
+  color: rgba(253, 118, 60, 1);
+  width: 150px;
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.text10 {
+  top: 43px;
+  left: 1465px;
+  color: rgba(253, 118, 60, 1);
+  height: auto;
+  position: absolute;
+  font-size: 24px;
+  font-style: SemiBold;
+  text-align: left;
+  font-family: Poppins;
+  font-weight: 600;
+  line-height: normal;
+  font-stretch: normal;
+  text-decoration: none;
+}
+.people {
+  top: 28px;
+  left: 1581px;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+}
+.wishlist {
+  top: 30px;
+  left: 1696px;
+  width: 64px;
+  height: 62px;
+  position: absolute;
+}
+
+
