@@ -1,35 +1,10 @@
-.container {
-  width: 100%;
-  display: sticky;
-  overflow: auto;
-  min-height: 100vh;
-  align-items: center;
-  flex-direction: column;
-}
 .header {
-  width: 1905px;
-  height: 50px;
-  display:  flex;
+  width: 1754px;
+  height: 123px;
+  display: flex;
   position: relative;
   align-items: flex-start;
   flex-shrink: 1;
-  top: 0;
-  z-index: 1000;
-}
-.searhbar {
-  gap: 344px;
-  top: 31px;
-  left: 737px;
-  width: 460px;
-  height: 62px;
-  display: flex;
-  padding: 3px 11px;
-  overflow: hidden;
-  position: absolute;
-  align-items: flex-start;
-  flex-shrink: 0;
-  border-radius: 48px;
-  background-color: rgba(251, 240, 240, 1);
 }
 .logo {
   top: 0px;
@@ -55,8 +30,8 @@
   text-decoration: none;
 }
 .text02 {
-  top: 43px;
-  left: 382px;
+  top: 39px;
+  left: 399px;
   color: rgba(253, 118, 60, 1);
   width: 175px;
   height: auto;
@@ -71,8 +46,8 @@
   text-decoration: none;
 }
 .text04 {
-  top: 47px;
-  left: 603px;
+  top: 40px;
+  left: 607px;
   color: rgba(253, 118, 60, 1);
   height: auto;
   position: absolute;
@@ -85,9 +60,41 @@
   font-stretch: normal;
   text-decoration: none;
 }
+.search {
+  top: 31px;
+  left: 737px;
+  width: 460px;
+  height: 62px;
+  display: flex;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 1;
+}
+.searhbar {
+  gap: 344px;
+  top: 0px;
+  left: 0px;
+  width: 460px;
+  height: 62px;
+  display: flex;
+  padding: 3px 11px;
+  overflow: hidden;
+  position: absolute;
+  align-items: flex-start;
+  flex-shrink: 0;
+  border-radius: 48px;
+  background-color: rgba(251, 240, 240, 1);
+}
+.searchlogo {
+  top: 12px;
+  left: 403px;
+  width: 50px;
+  height: 34px;
+  position: absolute;
+}
 .text06 {
-  top: 41px;
-  left: 756px;
+  top: 10px;
+  left: 19px;
   color: rgba(241, 9, 9, 1);
   height: auto;
   position: absolute;
@@ -102,13 +109,6 @@
 }
 .text07 {
   font-weight: 400;
-}
-.searchlogo {
-  top: 43px;
-  left: 1140px;
-  width: 50px;
-  height: 34px;
-  position: absolute;
 }
 .text08 {
   top: 45px;
@@ -149,11 +149,14 @@
   position: absolute;
 }
 .wishlist {
-  top: 30px;
-  left: 1696px;
+  top: 31px;
+  left: 1690px;
   width: 64px;
   height: 62px;
   position: absolute;
 }
-
-
+.root-class-name {
+  top: -3px;
+  left: 0px;
+  position: absolute;
+}
