@@ -5,7 +5,7 @@ import styles from './login.module.css';
 import img from './logsign.png';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-//import axios from 'axios';
+import axios from 'axios';
 
 function Login() {
   const navigate = useNavigate();
@@ -26,7 +26,7 @@ function Login() {
     e.preventDefault();
     
     try {
-      // const response = await axios.post('http://example.com/api/login', formData);
+      const response = await axios.post('http://localhost:8000/api/login', formData);
       console.log('Login successful:', response.data);
       navigate('/');
       

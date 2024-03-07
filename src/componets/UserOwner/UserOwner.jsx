@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Welcome from '../Welcome/Welcome';
 import styles from './owneruser.module.css';
-import img from './userowner.png';
+import image from './userowner.png';
 import owner from './owner.png';
 import renter from './renter.png';
 import { Link } from 'react-router-dom';
@@ -42,7 +42,7 @@ const UserOwner = () => {
 
 Welcome.defaultProps = {
     iMAGESrc:
-      img ,
+      image ,
     iMAGEAlt: 'IMAGE',
   }
   
