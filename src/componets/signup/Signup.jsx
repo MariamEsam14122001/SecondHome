@@ -8,6 +8,60 @@ import { Link } from 'react-router-dom';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const Signup = () => {
+  const cities = [
+    "Cairo", 
+    "Giza", 
+    "Alexandria", 
+    "Shubra al Khaymah", 
+    "Halwan", 
+    "Al Mahallah al Kubra", 
+    "Tanta", 
+    "Asyut", 
+    "Al Fayyum", 
+    "Az Zaqaziq", 
+    "Al Ajami", 
+    "Kafr ad Dawwar", 
+    "Damanhur", 
+    "Al Minya", 
+    "Mallawi", 
+    "Damietta", 
+    "Qina", 
+    "Bani Suwayf", 
+    "Shibin al Kawm", 
+    "Banha", 
+    "Kafr ash Shaykh", 
+    "Disuq", 
+    "Mit Ghamr", 
+    "Munuf", 
+    "Faqus", 
+    "Qalyub", 
+    "Jirja", 
+    "Akhmim", 
+    "Al Badrashayn", 
+    "Al Khankah", 
+    "Izbat al Burj", 
+    "Kirdasah", 
+    "Abnub", 
+    "Al Minshah", 
+    "Al Qurayn", 
+    "Al Balyana", 
+    "Al Ayyat", 
+    "Al Badari", 
+    "Kafr al Kurdi", 
+    "Abu Qir", 
+    "Al Karnak", 
+    "Mit Nama", 
+    "Bani Murr", 
+    "Al Madamud", 
+    "Birqash", 
+    "Kafr Tahlah"
+];
+
+const where_to_go =["Alexandria",
+  "Cairo",
+  "Aswan"];
+
+const status =["shared","single"];
   const { userType } = useParams();
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
@@ -20,6 +74,7 @@ const Signup = () => {
     city: '',
     where_to_go: '',
     phone: '',
+    photo:'',
   });
 
   const [error] = useState(null);
@@ -77,14 +132,21 @@ const Signup = () => {
             <input type='password' id='password' required
               className={styles['password']} name="password" value={formData.password} onChange={handleChange}
             />
+               
+               <span className={styles['pho']}>
+                  <span>Phone number</span>
+                </span>
+                <input type='tel' id='phone'
+                  className={styles['phon']} name="phone" value={formData.phone} onChange={handleChange}
+                />
+                 <span className={styles['text14']}>
+            <span>Profile picture</span>
+          </span>
+          <input type="file" id="photo" className={styles['photo']} name="photo" value={formData.photo} onChange={handleChange} accept="image/*" />
+
             {(userType === 'renter' || userType === 'user') && (
               <>
-                <span className={styles['stat']}>
-                  <span>Status</span>
-                </span>
-                <input type='text' id='status'
-                  className={styles['status']} name="status" value={formData.status} onChange={handleChange}
-                />
+                
                 <span className={styles['gend']}>
                   <span>Gender</span>
                 </span>
@@ -100,18 +162,28 @@ const Signup = () => {
                 <span className={styles['citee']}>
                   <span>City</span>
                 </span>
-                <input type='text' id='city'
-                  className={styles['city']} name="city" value={formData.city} onChange={handleChange}
-                />
-                <span  className={styles['phone-number']}>Phone number</span>
-                <input type='tel'  id='phone'
-                  className={styles['phone']} name="phone" value={formData.phone} onChange={handleChange}/>
+                <select className={styles['city']} id="city"name="city" value={formData.city} onChange={handleChange}>
+                       {cities.map(city => (
+                       <option key={city} value={city}>{city}</option>
+                    ))}
+                     </select>
+                
+                <span  className={styles['stat']}>Status</span>
+                <select className={styles['status']}  id='status' name="status" value={formData.status} onChange={handleChange}>
+                       {status.map(status => (
+                       <option key={status} value={status}>{status}</option>
+                    ))}
+                     </select>
                 <span className={styles['where']}>
+
                   <span>Where to go</span>
                 </span>
-                <input type='text' id='where_to_go'
-                  className={styles['wheretogo']} name="where_to_go" value={formData.where_to_go} onChange={handleChange}
-                />
+                <select className={styles['wheretogo']}  id='where_to_go' name="where_to_go" value={formData.where_to_go} onChange={handleChange}>
+                       {where_to_go.map(where_to_go => (
+                       <option key={where_to_go} value={where_to_go}>{where_to_go}</option>
+                    ))}
+                     </select>
+                
               </>
             )}
             <button type='submit' className={styles['button']}>

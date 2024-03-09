@@ -144,11 +144,11 @@
     border-width: 1px;
     border-radius: 6px;
   }
-  .stat {
+  .pho {
     top: 301px;
     left: 12px;
     color: rgba(255, 255, 255, 1);
-    width: 69px;
+    width: 155px;
     height: auto;
     position: absolute;
     font-size: 20px;
@@ -160,16 +160,42 @@
     font-stretch: normal;
     text-decoration: none;
   }
-  .status {
+  .phon {
     top: 331px;
-    left: 0px;
-    width: 464px;
-    height: 40px;
+  left: 0px;
+  width: 221px;
+  height: 40px;
+  position: absolute;
+  border-color: rgba(255, 255, 255, 1);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 6px;
+  }
+  .text14 {
+    top: 301px;
+    left: 255px;
+    color: rgba(255, 255, 255, 1);
+    width: 166px;
+    height: auto;
     position: absolute;
-    border-color: rgba(255, 255, 255, 1);
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 6px;
+    font-size: 20px;
+    font-style: Medium;
+    text-align: left;
+    font-family: Poppins;
+    font-weight: 500;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .photo{
+    
+      top: 331px;
+      left: 243px;
+      width: 221px;
+      height: 40px;
+      position:absolute;
+      
+    
   }
   .gend {
     top: 377px;
@@ -252,7 +278,7 @@
     border-width: 1px;
     border-radius: 6px;
   }
-  .phone-number {
+  .stat {
     top: 608px;
     color: rgba(255, 255, 255, 1);
     width: 155px;
@@ -267,7 +293,7 @@
     font-stretch: normal;
     text-decoration: none;
   }
-  .phone {
+  .status {
     top: 638px;
     left: 0px;
     width: 464px;
