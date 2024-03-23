@@ -1,6 +1,6 @@
-import PropTypes from 'prop-types';
+//import PropTypes from 'prop-types';
 import { React, useState } from 'react';
-import Welcome from '../Welcome/Welcome';
+import Welcome from '../../componets/Welcome/Welcome';
 import styles from './login.module.css';
 import img from './logsign.png';
 import { Link } from 'react-router-dom';
@@ -46,7 +46,7 @@ function Login() {
 
   return (
     <>
-      <Welcome />
+      <Welcome image={img} />
       <form onSubmit={handleSubmit} className={styles['container']}>
         <div className={styles['component1']}>
           <div className={styles['frameusersignup']}>
@@ -84,14 +84,14 @@ function Login() {
   );
 }
 
-Welcome.defaultProps = {
-  iMAGESrc: img,
-  iMAGEAlt: 'IMAGE',
-};
+// Welcome.defaultProps = {
+//   iMAGESrc: img,
+//   iMAGEAlt: 'IMAGE',
+// };
 
-Welcome.propTypes = {
-  iMAGESrc: PropTypes.string,
-  iMAGEAlt: PropTypes.string,
-};
+// Welcome.propTypes = {
+//   iMAGESrc: PropTypes.string,
+//   iMAGEAlt: PropTypes.string,
+// };
 
 export default Login;

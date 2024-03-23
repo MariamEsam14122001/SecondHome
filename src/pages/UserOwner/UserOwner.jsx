@@ -1,6 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Welcome from '../Welcome/Welcome';
+
+import Welcome from '../../componets/Welcome/Welcome';
 import styles from './owneruser.module.css';
 import image from './userowner.png';
 import owner from './owner.png';
@@ -14,7 +14,7 @@ const UserOwner = () => {
   
   return (
     <div className={styles['container']}>
-      <Welcome/>
+      <Welcome image={image}/>
       <div className={styles['component1']}>
         <Link to="/Signup/renter" className={styles['user']}>
           <span className={styles['text']}>I am a renter</span>
@@ -40,15 +40,15 @@ const UserOwner = () => {
   )
 }
 
-Welcome.defaultProps = {
-    iMAGESrc:
-      image ,
-    iMAGEAlt: 'IMAGE',
-  }
+// Welcome.defaultProps = {
+//     iMAGESrc:
+//       image ,
+//     iMAGEAlt: 'IMAGE',
+//   }
   
-  Welcome.propTypes = {
-    iMAGESrc: PropTypes.string,
-    iMAGEAlt: PropTypes.string,
-  }
+//   Welcome.propTypes = {
+//     iMAGESrc: PropTypes.string,
+//     iMAGEAlt: PropTypes.string,
+//   }
 
 export default UserOwner;

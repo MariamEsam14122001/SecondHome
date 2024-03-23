@@ -5,7 +5,7 @@
 }
 .item {
   width: 13rem;
-  height: 23rem;
+  height: 32rem;
   margin-bottom: 20px;
   display: flex;
   position: relative;
@@ -15,6 +15,15 @@
  
 
     
+}
+
+.wishlist {
+ 
+  top: 29rem;
+  left: 20rem;
+  width: 64px;
+  height: 62px;
+  position: absolute;
 }
 
 .content {
@@ -47,6 +56,9 @@
   font-stretch: normal;
   text-decoration: none;
 }
+
+
+
 .text2 {
   color: rgba(232, 151, 75, 1);
   height: auto;
@@ -93,3 +105,4 @@
   left: 112px;
   position: absolute;
 }
+

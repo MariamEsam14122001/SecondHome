@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Welcome from '../Welcome/Welcome';
+import Welcome from '../../componets/Welcome/Welcome';
 import styles from './signup.module.css';
 import PropTypes from 'prop-types';
 import img from './logsign.png';
@@ -102,7 +102,7 @@ const status =["shared","single"];
 
   return (
     <>
-      <Welcome/>
+      <Welcome image={img}/>
       <form onSubmit={handleSubmit} className={styles['container']}>
         {error && <div className={styles.error}>{error}</div>}
         <div className={styles['component1']}>
@@ -200,15 +200,15 @@ const status =["shared","single"];
   )
 }
 
-Welcome.defaultProps = {
-  iMAGESrc:
-    img ,
-  iMAGEAlt: 'IMAGE',
-}
+// Welcome.defaultProps = {
+//   iMAGESrc:
+//     img ,
+//   iMAGEAlt: 'IMAGE',
+// }
 
-Welcome.propTypes = {
-  iMAGESrc: PropTypes.string,
-  iMAGEAlt: PropTypes.string,
-}
+// Welcome.propTypes = {
+//   iMAGESrc: PropTypes.string,
+//   iMAGEAlt: PropTypes.string,
+// }
 
 export default Signup;
