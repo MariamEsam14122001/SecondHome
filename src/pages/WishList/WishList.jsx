@@ -33,13 +33,5 @@ function WishList() {
     </div>
   );
 }
-// function WishList({ wishlist }) {
-//   return (
-//     <div>
-//       <Header/>
-//       <h2>Wish List</h2>
-//       <Items accommodations={wishlist} />
-//     </div>
-//   );
-// }
+
 export default WishList;
