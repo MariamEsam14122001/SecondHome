@@ -2,13 +2,27 @@ import React from "react";
 import styles from "./item.module.css";
 import loc from "./location.png";
 import wishlist from "./wishlist.png";
+import axios from "axios";
 
 function Item( { title , price , location,image }) {
+
+  const handleAddToWishlist = async () => {
+    try {
+      await axios.post('/api/wishlist', { title, price, location, image });
+      // Handle success
+    } catch (error) {
+      console.error('Error adding to wishlist:', error);
+      // Handle error
+    }
+  };
+
     return(
       <div className={styles["card"]}>
       <div className="col card ">
         <div className={styles['item']}>
-        <img src={wishlist} className={styles['wishlist']}/>
+        <div onClick={handleAddToWishlist} style={{ cursor: 'pointer' }}>
+        <img src={wishlist} className={styles['wishlist']}/> 
+        </div>
         <div className={styles['content']}>
           <div className={styles['frame53']}>
           
