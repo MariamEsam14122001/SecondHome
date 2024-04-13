@@ -2,8 +2,8 @@
 
 
 import Home from "./pages/Home/Home";
-import SearchForm from "./componets/SearchForm/SearchForm";
-import SearchResult from "./pages/SearchResults/SerchResults";
+import SearchForm from "./componets/SearchBar/SearchBar";
+import SearchResult from "./pages/SearchPage/SerchPage";
 
 const App = () => {
   return (

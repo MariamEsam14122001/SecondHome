@@ -1,40 +1,57 @@
 
 
-import React, { useState } from 'react';
-import styles from './searchForm.module.css'; 
+import React, { useState, useEffect } from 'react';
+import styles from './searchBar.module.css';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
 
-function SearchForm({ onSearch }) {
+import SearchButton from '../SearchButton/SearchButton';
+
+const SearchBar = ({ initialValues, onSearch, navigate }) => { // Receive navigate function as a prop
   const [query, setQuery] = useState('');
-  const [price, setPrice] = useState('');
+  const [searchType, setSearchType] = useState('');
   const [city, setCity] = useState('');
-  const [type, setType] = useState('');
+  const [price, setPrice] = useState('');
 
-  // Sample list of cities
+  useEffect(() => {
+    if (initialValues) {
+      setQuery(initialValues.query || '');
+      setSearchType(initialValues.searchType || '');
+      setCity(initialValues.city || '');
+      setPrice(initialValues.price || '');
+    }
+  }, [initialValues]);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    onSearch({ query, searchType, city, price });
+    navigate('/search'); // Use navigate function to navigate to search results page
+  };
+
+ 
   const cities = ["Alexandria",
     "Cairo",
     "Aswan"];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch({ query, price, city, type });
-  };
+ 
 
   return (
     <form className={styles["search-form"]} onSubmit={handleSubmit}>
       <input
         type="text"
+        name="query"
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="Enter Region"
       />
       <input
         type="number"
+        name="price"
         value={price}
         onChange={(e) => setPrice(e.target.value)}
         placeholder="Price"
       />
-      <select value={city} onChange={(e) => setCity(e.target.value)}>
+      <select value={city} name="city"  onChange={(e) => setCity(e.target.value)}>
         <option value="">All cities</option>
         {cities.map((city) => (
           <option key={city} value={city}>
@@ -42,12 +59,13 @@ function SearchForm({ onSearch }) {
           </option>
         ))}
       </select>
-      <select value={type} onChange={(e) => setType(e.target.value)}>
+      <select value={searchType} name={searchType} onChange={(e) => setSearchType(e.target.value)}>
         <option value="">All Types</option>
         <option value="ind">Individual</option>
         <option value="Shared">Shared</option>
+       
       </select>
-     <Link to="/SearchResult"><button type="submit">Search</button></Link> 
+      <SearchButton/>
     </form>
   );
 }
@@ -62,4 +80,4 @@ function SearchForm({ onSearch }) {
 //   defaultType: PropTypes.string,
 // };
 
-export default SearchForm;
+export default SearchBar;

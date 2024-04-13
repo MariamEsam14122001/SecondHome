@@ -7,9 +7,9 @@ const Items = ({ accommodations  }) => {
   return (
     <div className={styles["card-container"]}>
     <div className="row  row-cols-md-4 g-4">
-    {accommodations.map((accommodation) => (
+    {accommodations.map((accommodation, index) => (
           <Item
-            key={accommodation.id}
+            key={index}
             title={accommodation.title}
             price={accommodation.price}
             location={accommodation.location}

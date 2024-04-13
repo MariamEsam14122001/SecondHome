@@ -4,7 +4,7 @@ import Signup from './pages/signup/Signup.jsx';
 import UserOwner from './pages/UserOwner/UserOwner.jsx';
 import Login from './pages/login/Login.jsx';
 import Admin from "./pages/Admin/Admin.jsx";
-import SearchResult from "./pages/SearchResults/SerchResults.jsx";
+import SearchPage from "./pages/SearchPage/SerchPage.jsx";
 
 import WishList from "./pages/WishList/WishList.jsx";
 
@@ -15,7 +15,7 @@ import WishList from "./pages/WishList/WishList.jsx";
     {path: "/Signup/:userType" , element:<Signup/>} ,
     {path: "/Login" , element: <Login/> },
     {path: "/Admin" , element: <Admin/>},
-    {path:"/SearchResult" , element: <SearchResult/>},
+    {path:"/search" , element: <SearchPage/>},
     {path:"/wishlist" , element: <WishList/>}
     
   ]);

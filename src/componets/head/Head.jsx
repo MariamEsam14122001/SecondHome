@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./head.module.css";
 import image from "./image.png";
-import SearchForm from "../SearchForm/SearchForm";
+import SearchForm from "../SearchBar/SearchBar";
 const Head = (props) => {
     return(
         <div className={styles['head'] }>
