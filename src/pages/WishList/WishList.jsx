@@ -1,35 +1,28 @@
 // WishList.js
 
-import React, { useState, useEffect } from 'react';
+import React, {  useEffect } from 'react';
+import axios from 'axios';
 import Items from '../../componets/Items/Items';
 import Header from '../../componets/header/Header';
 import styles from './wishlist.module.css';
-import AccommodationList from '../../componets/AccommodationList/AccommodationList'
-import accommodationsData from './accommodations.json'
-import axios from 'axios'; 
+//import { useWishlist } from '../../Context/WishlistContext';
+
 function WishList() {
 
-  // const [wishlist, setWishlist] = useState([]);
+  // const { wishlist, fetchLikedItems } = useWishlist();
 
   // useEffect(() => {
-  //   // Fetch wishlist items from backend when component mounts
-  //   axios.get('/api/wishlist')
-  //     .then(response => {
-  //       setWishlist(response.data);
-  //     })
-  //     .catch(error => {
-  //       console.error('Error fetching wishlist:', error);
-  //     });
+  //   fetchLikedItems();
   // }, []);
+
+ 
 
   return (
     <div>
       <nav className={styles['header']}>
         <Header/></nav>
-   { /*  <Items accommodations={wishlist}/> */}
-   <div className={styles['list']}>
-   <AccommodationList accommodations={accommodationsData} />
-   </div>
+        {/*<Items accommodations={wishlist} />*/}
+  
     </div>
   );
 }

@@ -1,28 +1,37 @@
 import React from "react";
 import styles from "./item.module.css";
 import loc from "./location.png";
-import wishlist from "./wishlist.png";
-import axios from "axios";
+import red from "./red-heart-icon.svg";
+import empty from "./empty_heart.svg";
+//import { useWishlist } from "../../Context/WishlistContext";
 
-function Item( { title , price , location,image }) {
 
-  const handleAddToWishlist = async () => {
-    try {
-      await axios.post('/api/wishlist', { title, price, location, image });
-      // Handle success
-    } catch (error) {
-      console.error('Error adding to wishlist:', error);
-      // Handle error
-    }
-  };
+function Item( {  id ,title , price , location,image  }) {
+
+  // const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
+
+  // const handleToggleLike = () => {
+  //   if (wishlist.includes(id)) {
+  //     removeFromWishlist(id);
+  //   } else {
+  //     addToWishlist(id);
+  //   }
+  // };
+
 
     return(
       <div className={styles["card"]}>
       <div className="col card ">
         <div className={styles['item']}>
-        <div onClick={handleAddToWishlist} style={{ cursor: 'pointer' }}>
-        <img src={wishlist} className={styles['wishlist']}/> 
-        </div>
+        <div className={styles['wishlist']}>
+       {/*} <img
+        src={wishlist.includes(id) ? red : empty}
+        alt={wishlist.includes(id) ? 'Liked' : 'Like'}
+        onClick={handleToggleLike}
+        style={{ cursor: 'pointer' }}
+    />*/}
+        </div> 
+
         <div className={styles['content']}>
           <div className={styles['frame53']}>
           

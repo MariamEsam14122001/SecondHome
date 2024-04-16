@@ -14,7 +14,7 @@ const Header = (props) => {
     <img src={logo} className={styles['logo']} />
     <ul className={styles['menu']}>
     <li><Link to="/">Home</Link></li>
-    <li ><Link>Accommodation</Link></li>
+    <li ><Link to="/search">Accommodation</Link></li>
     <li ><Link>contact us</Link></li>
     <li><Link to="/Getstarted" >Get started </Link></li>
     <li><Link to="/Login" >log in</Link></li>

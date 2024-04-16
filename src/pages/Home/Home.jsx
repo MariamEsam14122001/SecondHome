@@ -11,9 +11,28 @@ import SearchBar from '../../componets/SearchBar/SearchBar';
 import PropTypes from 'prop-types';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import Items from '../../componets/Items/Items';
 
 const Home =() =>{
 
+//   //recommended 
+//  const [items, setItems] = useState([]);
+
+//   useEffect(() => {
+//     fetchItems();
+//   }, []);
+
+//   const fetchItems = async () => {
+//     // Simulated data for demonstration
+//     const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+//     setItems(response.data);
+//   };
+ 
+ 
+ 
+ 
+ 
+  //search
   const [searchParams, setSearchParams] = useState({});
   const navigate = useNavigate(); 
 
@@ -40,6 +59,10 @@ const Home =() =>{
         <Title/>
         
         <AccommodationList accommodations={accommodationsData}/>
+
+
+        {/*recommended
+        <Items accommodations={items}/>*/}
          
         <Footer/>
           

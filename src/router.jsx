@@ -7,7 +7,7 @@ import Admin from "./pages/Admin/Admin.jsx";
 import SearchPage from "./pages/SearchPage/SerchPage.jsx";
 
 import WishList from "./pages/WishList/WishList.jsx";
-
+import { WishlistProvider } from "./Context/WishlistContext.jsx";
 
  const router = createBrowserRouter([
     {path: "/" , element: <App/> },
@@ -16,7 +16,7 @@ import WishList from "./pages/WishList/WishList.jsx";
     {path: "/Login" , element: <Login/> },
     {path: "/Admin" , element: <Admin/>},
     {path:"/search" , element: <SearchPage/>},
-    {path:"/wishlist" , element: <WishList/>}
+    {path:"/wishlist" ,  element: <WishlistProvider><WishList /></WishlistProvider> },
     
   ]);
 
