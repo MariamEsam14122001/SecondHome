@@ -2,9 +2,8 @@
 
 
 import Home from "./pages/Home/Home";
+import OwnerHeader from "./componets/OwnerHeader/OwnerHeader";
 
-import SearchForm from "./componets/SearchBar/SearchBar";
-import SearchResult from "./pages/SearchPage/SerchPage";
 
 const App = () => {
   return (

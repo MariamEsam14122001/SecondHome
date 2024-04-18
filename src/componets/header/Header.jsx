@@ -8,6 +8,7 @@ import styles from './header.module.css';
 
 
 
+
 const Header = (props) => {
   return (
     <header>
@@ -15,12 +16,12 @@ const Header = (props) => {
     <ul className={styles['menu']}>
     <li><Link to="/">Home</Link></li>
     <li ><Link to="/search">Accommodation</Link></li>
-    <li ><Link>contact us</Link></li>
+    <li ><Link t="/contact">contact us</Link></li>
     <li><Link to="/Getstarted" >Get started </Link></li>
     <li><Link to="/Login" >log in</Link></li>
     </ul>
     <div className={styles["profile-icons"]}>
-    <img src={people} className={styles['people']}/>
+    <Link to="/userform"><img src={people} className={styles['people']}/></Link>
     <Link to="/wishlist"><img src={wishlist} className={styles['wishlist']}/></Link>
     </div>
   </header>

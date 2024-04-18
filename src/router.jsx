@@ -5,8 +5,11 @@ import UserOwner from './pages/UserOwner/UserOwner.jsx';
 import Login from './pages/login/Login.jsx';
 import Admin from "./pages/Admin/Admin.jsx";
 import SearchPage from "./pages/SearchPage/SerchPage.jsx";
-
+import Userform from "./pages/profiles/Userprof.jsx";
+import Ownerform from "./pages/profiles/Ownerr.jsx";
 import WishList from "./pages/WishList/WishList.jsx";
+import Contact from "./pages/contact&about/ContactAbout.jsx";
+import Uploadform from "./pages/upload/Upload-image.jsx";
 import { WishlistProvider } from "./Context/WishlistContext.jsx";
 
  const router = createBrowserRouter([
@@ -17,7 +20,10 @@ import { WishlistProvider } from "./Context/WishlistContext.jsx";
     {path: "/Admin" , element: <Admin/>},
     {path:"/search" , element: <SearchPage/>},
     {path:"/wishlist" ,  element: <WishlistProvider><WishList /></WishlistProvider> },
-    
+    {path:"/userform" , element: <Userform/>},
+    {path:"/ownerform" , element: <Ownerform/>},
+    {path:"/contact" , element: <Contact/>},
+    {path:"/upload" , element: <Uploadform/>}
   ]);
 
   export default router;

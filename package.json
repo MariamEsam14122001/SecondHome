@@ -11,7 +11,10 @@
   },
   "dependencies": {
     "@emotion/styled": "^11.11.0",
+    "@fortawesome/free-brands-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.15.11",
+    "aframe": "^1.5.0",
     "axios": "^1.6.7",
     "bootstrap": "^5.3.3",
     "react": "^18.2.0",
