@@ -70,14 +70,5 @@ const SearchBar = ({ initialValues, onSearch, navigate }) => { // Receive naviga
   );
 }
 
-// SearchForm.defaultProps = {
-//   defaultCity: "All cities",
-//   defaultType: "All Types"
-// };
-
-// SearchForm.propTypes = {
-//   defaultCity: PropTypes.string,
-//   defaultType: PropTypes.string,
-// };
 
 export default SearchBar;

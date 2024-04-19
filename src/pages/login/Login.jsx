@@ -31,17 +31,20 @@ function Login() {
 
       const userType = response.data.userType; // Assuming the backend provides user type upon successful login
 
-      if (userType === 'admin') {
+      //const email = response.data.email;
+      const email = formData.email ;
+      
+      if (email.endsWith('@example.com')) {
         navigate('/Admin');
-      } else {
+      } else if (userType === 'user') {
         navigate('/');
-      }
-
+      } else if (userType === 'owner') {
+        navigate('/owner');
+      } 
     } catch (error) {
       console.error('Login failed:', error);
       // Handle login failure
     }
-
   };
 
   return (
@@ -84,14 +87,6 @@ function Login() {
   );
 }
 
-// Welcome.defaultProps = {
-//   iMAGESrc: img,
-//   iMAGEAlt: 'IMAGE',
-// };
 
-// Welcome.propTypes = {
-//   iMAGESrc: PropTypes.string,
-//   iMAGEAlt: PropTypes.string,
-// };
 
 export default Login;

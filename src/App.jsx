@@ -2,7 +2,7 @@
 
 
 import Home from "./pages/Home/Home";
-import OwnerHeader from "./componets/OwnerHeader/OwnerHeader";
+import Owner from "./pages/ownerHome/OwnerHome";
 
 
 const App = () => {

@@ -92,8 +92,13 @@ const status =["shared","single"];
 
     try {
       const response = await axios.post('http://localhost:8000/api/register', { ...formData, user_type: userType });
+
       console.log('Signup successful:', response.data);
-      navigate('/');
+       if (userType === 'user') {
+        navigate('/');
+      } else if (userType === 'owner') {
+        navigate('/owner');
+      } 
     } catch (error) {
       console.error('Signup failed:', error);
       //setError(error.response.data.message || 'An error occurred during registration.');
@@ -200,15 +205,6 @@ const status =["shared","single"];
   )
 }
 
-// Welcome.defaultProps = {
-//   iMAGESrc:
-//     img ,
-//   iMAGEAlt: 'IMAGE',
-// }
 
-// Welcome.propTypes = {
-//   iMAGESrc: PropTypes.string,
-//   iMAGEAlt: PropTypes.string,
-// }
 
 export default Signup;
