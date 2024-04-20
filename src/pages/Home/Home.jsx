@@ -29,23 +29,23 @@ const Home =() =>{
 //   };
  
  
- 
- 
- 
-  //search
-  const [searchParams, setSearchParams] = useState({});
-  const navigate = useNavigate(); 
+ //search 
+
+ const navigate = useNavigate();
 
   const handleSearch = async (params) => {
     try {
       const response = await axios.get('/api/search', { params });
-      console.log(response.data); // Handle response data (e.g., update state)
+      // Assuming you want to navigate after setting the state
+      setSearchResults(response.data);
       navigate('/search');
     } catch (error) {
       console.error('Error searching:', error);
     }
-    setSearchParams(params);
   };
+ 
+ 
+ 
 
     return(
         <div className={styles['container']}>
@@ -53,7 +53,7 @@ const Home =() =>{
         <Header/>
         <Head/>
         <div className={styles['archieve']}>
-        <SearchBar initialValues={searchParams} onSearch={handleSearch} navigate={navigate} />
+        <SearchBar onSearch={handleSearch} />
         
       </div>
         <Title/>

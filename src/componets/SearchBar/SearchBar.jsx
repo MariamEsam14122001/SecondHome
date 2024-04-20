@@ -1,37 +1,26 @@
 
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './searchBar.module.css';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 
-import SearchButton from '../SearchButton/SearchButton';
-
-const SearchBar = ({ initialValues, onSearch, navigate }) => { // Receive navigate function as a prop
+const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState('');
   const [searchType, setSearchType] = useState('');
   const [city, setCity] = useState('');
   const [price, setPrice] = useState('');
 
-  useEffect(() => {
-    if (initialValues) {
-      setQuery(initialValues.query || '');
-      setSearchType(initialValues.searchType || '');
-      setCity(initialValues.city || '');
-      setPrice(initialValues.price || '');
-    }
-  }, [initialValues]);
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-    onSearch({ query, searchType, city, price });
-    navigate('/search'); // Use navigate function to navigate to search results page
+    try {
+      const response = await axios.get('/api/search', { params: { query, searchType, city, price } });
+      onSearch(response.data);
+    } catch (error) {
+      console.error('Error searching:', error);
+    }
   };
 
- 
-  const cities = ["Alexandria",
-    "Cairo",
-    "Aswan"];
+  const cities = ["Alexandria", "Cairo", "Aswan"];
 
  
 
@@ -65,7 +54,7 @@ const SearchBar = ({ initialValues, onSearch, navigate }) => { // Receive naviga
         <option value="Shared">Shared</option>
        
       </select>
-      <SearchButton/>
+      <button className={styles["search-button"]} type="submit">Search</button>
     </form>
   );
 }

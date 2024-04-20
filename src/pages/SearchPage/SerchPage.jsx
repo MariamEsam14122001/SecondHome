@@ -1,20 +1,19 @@
+// SearchPageResults.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchBar from '../../componets/SearchBar/SearchBar';
-import SearchResults from '../../componets/SearchResults/SearchResults';
-import {  useLocation } from 'react-router-dom'; 
+import SearchBar from '../../components/SearchBar/SearchBar';
 import styles from './SearchPage.module.css';
+import Items from '../../components/Items/Items';
 
-const SearchPage = ({ navigate }) => {
-  const location = useLocation();
-  const { searchParams } = location.state || {};
-  const [results, setResults] = useState([]);
+const SearchPageResults = () => {
+  const [searchResults, setSearchResults] = useState([]);
+  //const location = useLocation();
+  //const { searchParams } = location.state || {};
 
   const handleSearch = async (params) => {
     try {
       const response = await axios.get('/api/search', { params });
-      setResults(response.data);
-      navigate('/search');
+      setSearchResults(response.data);
     } catch (error) {
       console.error('Error searching:', error);
     }
@@ -22,15 +21,13 @@ const SearchPage = ({ navigate }) => {
 
   return (
     <div>
-        <div className={styles["header"]} >
-        <SearchBar initialValues={searchParams} onSearch={handleSearch} />
-        </div>
-        <SearchResults results={results} />
+      <div className={styles["header"]}>
+      <SearchBar onSearch={handleSearch} />
+      </div>
       
+      <Items accommodations={searchResults} />
     </div>
   );
-}
+};
 
-//<Items accommodations={searchResults} />
-
-export default SearchPage;
+export default SearchPageResults;
