@@ -16,7 +16,7 @@ const UserOwner = () => {
     <div className={styles['container']}>
       <Welcome image={image}/>
       <div className={styles['component1']}>
-        <Link to="/Signup/renter" className={styles['user']}>
+        <Link to="/Signup/user" className={styles['user']}>
           <span className={styles['text']}>I am a renter</span>
           <img
             alt="man10111"

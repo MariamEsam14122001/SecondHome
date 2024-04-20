@@ -1,35 +1,25 @@
 import React from "react";
 import styles from "./item.module.css";
 import loc from "./location.png";
-import red from "./red-heart-icon.svg";
-import empty from "./empty_heart.svg";
+// import red from "./red-heart-icon.svg";
+// import empty from "./empty_heart.svg";
 //import { useWishlist } from "../../Context/WishlistContext";
+import HeartButton from "../heart/Heart";
+import { Link } from "react-router-dom";
 
 
 function Item( {  id ,title , price , location,image  }) {
 
-  // const { wishlist, addToWishlist, removeFromWishlist } = useWishlist();
-
-  // const handleToggleLike = () => {
-  //   if (wishlist.includes(id)) {
-  //     removeFromWishlist(id);
-  //   } else {
-  //     addToWishlist(id);
-  //   }
-  // };
-
+  
 
     return(
-      <div className={styles["card"]}>
+      <>
+     <Link to="/details"><div  className={styles["card"]}>
       <div className="col card ">
         <div className={styles['item']}>
         <div className={styles['wishlist']}>
-       {/*} <img
-        src={wishlist.includes(id) ? red : empty}
-        alt={wishlist.includes(id) ? 'Liked' : 'Like'}
-        onClick={handleToggleLike}
-        style={{ cursor: 'pointer' }}
-    />*/}
+          <HeartButton id={id}/>
+   
         </div> 
 
         <div className={styles['content']}>
@@ -65,7 +55,8 @@ function Item( {  id ,title , price , location,image  }) {
       </div>
       </div>
       </div>
-      
+      </Link> 
+      </>
     )
 }
 

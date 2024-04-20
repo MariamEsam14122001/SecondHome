@@ -12,6 +12,7 @@ import Contact from "./pages/contact&about/ContactAbout.jsx";
 import Uploadform from "./pages/upload/Upload-image.jsx";
 import { WishlistProvider } from "./Context/WishlistContext.jsx";
 import Owner from "./pages/ownerHome/OwnerHome.jsx";
+import PropertyDetails1 from "./pages/property details/Propperty.jsx";
 
  const router = createBrowserRouter([
     {path: "/" , element: <App/> },
@@ -25,7 +26,8 @@ import Owner from "./pages/ownerHome/OwnerHome.jsx";
     {path:"/ownerform" , element: <Ownerform/>},
     {path:"/contact" , element: <Contact/>},
     {path:"/upload" , element: <Uploadform/>},
-    {path:"/owner" , element: <Owner/>}
+    {path:"/owner" , element: <Owner/>},
+    {path:"/details" , element: <PropertyDetails1/>},
   ]);
 
   export default router;
