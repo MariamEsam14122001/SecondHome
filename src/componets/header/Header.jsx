@@ -16,7 +16,7 @@ const Header = (props) => {
     <ul className={styles['menu']}>
     <li><Link to="/">Home</Link></li>
     <li ><Link to="/search">Accommodation</Link></li>
-    <li ><Link t="/contact">Contact us</Link></li>
+    <li ><Link to="/contact">Contact us</Link></li>
     <li ><Link>Help</Link></li>
     <li><Link to="/Getstarted" >Get started </Link></li>
     <li><Link to="/Login" >log in</Link></li>

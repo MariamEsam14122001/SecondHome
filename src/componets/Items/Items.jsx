@@ -2,14 +2,16 @@
 import React from 'react';
 import Item from '../Item/Item';
 import styles from "./items.module.css";
+import { Link } from "react-router-dom";
 
 const Items = ({ accommodations  }) => {
   return (
     <div className={styles["card-container"]}>
     <div className="row  row-cols-md-3 g-3">
     {accommodations.map( accommodation  => (
+      <Link to={`/details/${accommodation.id}`}>
           <Item
-            key={accommodation.id}
+           
             id={accommodation.id}
             title={accommodation.title}
             price={accommodation.price}
@@ -18,6 +20,7 @@ const Items = ({ accommodations  }) => {
            
            
           />
+          </Link>
           ))}
     </div>
     </div>

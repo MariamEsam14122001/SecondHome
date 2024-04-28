@@ -1,9 +1,9 @@
 // SearchPageResults.jsx
 import React, { useState } from 'react';
 import axios from 'axios';
-import SearchBar from '../../components/SearchBar/SearchBar';
+import SearchBar from '../../componets/SearchBar/SearchBar';
 import styles from './SearchPage.module.css';
-import Items from '../../components/Items/Items';
+import Items from '../../componets/Items/Items';
 
 const SearchPageResults = () => {
   const [searchResults, setSearchResults] = useState([]);
@@ -25,7 +25,7 @@ const SearchPageResults = () => {
       <SearchBar onSearch={handleSearch} />
       </div>
       
-      <Items accommodations={searchResults} />
+      {/*<Items accommodations={searchResults} />*/}
     </div>
   );
 };

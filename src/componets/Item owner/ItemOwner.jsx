@@ -5,16 +5,16 @@ import loc from "./location.png";
 // import empty from "./empty_heart.svg";
 //import { useWishlist } from "../../Context/WishlistContext";
 import HeartButton from "../heart/Heart";
+import { Link } from "react-router-dom";
 
 
-
-function Item( {  id ,title , price , location,image  }) {
+function ItemOwner( {  id ,title , price , location,image  }) {
 
   
 
     return(
       <>
-     <div  className={styles["card"]}>
+     <Link to="/details"><div  className={styles["card"]}>
       <div className="col card ">
         <div className={styles['item']}>
         <div className={styles['wishlist']}>
@@ -55,9 +55,9 @@ function Item( {  id ,title , price , location,image  }) {
       </div>
       </div>
       </div>
-       
+      </Link> 
       </>
     )
 }
 
-export default Item;
+export default ItemOwner;

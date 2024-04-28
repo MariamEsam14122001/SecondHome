@@ -27,7 +27,7 @@ import PropertyDetails1 from "./pages/property details/Propperty.jsx";
     {path:"/contact" , element: <Contact/>},
     {path:"/upload" , element: <Uploadform/>},
     {path:"/owner" , element: <Owner/>},
-    {path:"/details" , element: <PropertyDetails1/>},
+    {path:"/details/:id" , element: <PropertyDetails1/>},
   ]);
 
   export default router;
